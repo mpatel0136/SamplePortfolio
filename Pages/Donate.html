@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head>
+     <title>Mausmi Patel Portfolio</title>
+     
+    <!-- meta tags go inside head element. Used to viewport settings, descriptions etc. -->
+     
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="Style.css" rel="stylesheet">
+     <link href="w3.css" rel="stylesheet">
+     <meta name="description" content="Mausmi Patel Portfolio">
+   
+    
+<script>
+  function validateInput() {
+      var x = document.forms["donationInfo"]["amount"].value;
+      if (!x > 0) {
+          alert("Donation amount must be greater than 0");
+          return false; 
+      }
+      
+       var y = document.forms["donationInfo"]["email"].value;
+    if (!y.includes("@")){
+        alert("Invalid email address");
+        return false;
+    }
+      
+    
+        var z = document.forms["donationInfo"]["ccNumber"].value;
+      if (z.length != 16) {
+          alert("Credit Number must be 16 digits");
+          return false;
+      }
+      
+      if (!document.forms["donationInfo"] ["agreeYes"].checked) {
+          alert("You must agree to the terms");
+          return false;
+      }
+      alert("Your data has been successfully captured");
+      return true;
+  }
+   
+    
+    
+</script>     
+</head>
+   
+    
+    
+<body>
+    <header class="w3-container">             
+    <nav class="w3-container w3-bar w3-mobile w3-padding-16 w3-large w3-margin">
+
+
+            <h1> Mausmi Patel</h1>
+    
+
+<a href="index.html" class="w3-bar-item w3-button">Home</a>
+<a href="Resume.html" class="w3-bar-item w3-button"> Resume</a>
+<a href="Interests.html" class="w3-bar-item w3-button">Interests</a>
+<a href="Donate.html" class="w3-bar-item w3-button">Donate</a>  
+       
+    </nav>
+</header>
+
+    <!-- header and main tags help with search and navigation -->
+   
+    
+    <main>
+        <div id="main" class="w3-container w3-mobile">
+            
+    <h3>Donate to the Georgia College Foundation</h3> 
+        <br/>
+    <p>The Georgia College Foundation aims to provide scholarships and other resources to students with the hopes of reducing their financial burden.The Foundation also fundraises to obtain the best technology and resources for our classrooms.</p>
+        <br/>
+    <p>Currently, the Foundation is providing essentials, such as food and clothing, to students impacted by COVID-19. All donations made right now will go directly to students who have shared their financial hardships with us during this time.</p>
+    <br/>
+    <p>If you would like to donate to the Georgia College Foundation, then please fill out the form below. </p>
+        <br/>
+    <p>Any donation amount is greatly appreciated!</p>
+        <br/>
+            <br/>
+            
+      <form id="donationInfo">
+            <table>
+        <tr>
+          <td><label for="title">Title:</label>
+                Mr.<input type="radio" name="title">
+                Mrs.<input type="radio" name="title">
+                Ms. <input type="radio" name="title">
+                Dr. <input type="radio" name="title"></td> 
+         </tr>
+                
+         <tr>
+          <td><label for="fname">First Name:</label><input type="text" name="fname" id="fname" size="20"></td>
+             
+          <td><label for="lname">Last Name:</label><input type="text" name="lname" id="lname" size="25"></td>
+        </tr>
+          
+        <tr>
+            <td><label for="email">Email Address:</label><input type="email" id="email" name="email" size="25"></td>
+            
+            <td><label for="date">Date:</label><input type="date" id="date" name="date"></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><label for="phonetype">Phone Type:</label>
+                <select id="phonetype">
+                    <option value="C">cell</option>
+                    <option value="H">Home</option>
+                    <option value="W">Work</option>
+                    <option value="O">Other</option>
+                </select></td>
+            <td><label for="telephone">Phone Number:</label><input type="tel" id="telephone" name="telephone"></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><label for="amount">Donation Amount:</label><input type="number" id="amount" name="amount"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><label for="ccNumber">Credit Card Number:</label><input type="text" id="ccNumber" name="ccNumber" size="19"></td>
+            
+            <td><label for="security">Security Code:</label><input type="text" id="security" name="security" size="4"></td>
+            
+            <td><label for="expiration">Expiration:</label><input type="text" id="expiration" name="expiration" size="5"></td>
+        </tr>
+          
+        <tr>
+            <td>Agree to Terms:</td>
+            <td>Yes <input type="checkbox" name="agreeYes" value="Yes">
+            No <input type="checkbox" id="checkbox" name="agreeNo" value="No"></td>
+          </tr>
+                
+        </table>
+    <br/>
+    <br/>
+    <br/>
+          
+ </form>
+     <input type="button" value="Donate Now" onclick="return validateInput()"> <br/>
+        <br/>
+            
+        </div>      
+        
+    </main>
+        
+    <footer class="w3-container w3-mobile w3-theme-d5 w3-padding-16 w3-large">
+     <div class="box w3-container w3-center">
+        <p>Contact Me</p> 
+        <a href="tel:706-466-2693">(706)466-2693</a> <br>
+        <a href="mailto:mausmipatel@gmail.com" target="_blank">mausmipatel@gmail.com</a> <br>
+        <a href="https://www.linkedin.com/in/mausmipatel/" target="_blank">Linkedin</a>
+     </div>
+
+     </footer>
+    
+    </body>
+
+    
+
